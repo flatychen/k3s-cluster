@@ -12,4 +12,5 @@ Vagrant.configure("2") do |config|
 		v.customize ["modifyvm", :id, "--cpus",4]
   end
   config.vm.provision "shell", path: "configure_env.sh", privileged: true
+  config.vm.provision "shell", path: "configure_k3s.sh", privileged: true
 end
